@@ -25,6 +25,7 @@ fn main() -> Result<()> {
 
                 let out = std::fs::File::create(file_name.clone() + "_" + g.name + ".obj").unwrap();
                 let mut f = std::io::BufWriter::new(out);
+                #[allow(unused_assignments)]
                 for i in 0..vertex_count as usize {
                     let mut c = vertex_stride as usize * i;
                     if g.vertex_bitmask.contains(VertexFeatures::Position) {

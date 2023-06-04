@@ -27,7 +27,6 @@ pub mod bin {
 }
 
 pub mod hg {
-    use super::*;
     use bitmask::bitmask;
     use std::str::Utf8Error;
 
@@ -263,10 +262,7 @@ pub mod hg {
         pub name: &'a str,
         pub idk: u32,
         // T R S
-        pub coords: TRS3d, //[[f32; 3]; 3],
-                           // pub coords1: [f32; 4],
-                           // pub coords2: [f32; 3],
-                           // pub coords3: [f32; 3],
+        pub coords: TRS3d,
     }
 
     #[derive(Debug)]
